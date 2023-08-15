@@ -9,7 +9,7 @@ export default function index() {
   return (
     <div>
       <h1 className='text-2xl'>{HeroMe.title}</h1>
-      <Badge variant={'outline'} className='my-8 text-[#8C99AF] rounded-2xl w-fit flex items-center text-sm'><div className="w-2.5 h-2.5 border-[1px] border-green-700 bg-green-400 rounded-full animate-ping mr-2"></div>Some social media you can contact</Badge>
+      <Badge variant={'outline'} className='my-8 text-[#8C99AF] rounded-2xl w-fit flex items-center text-sm'><div className="w-1.5 h-1.5 border-[1px] border-green-700 bg-green-400 rounded-full animate-ping mr-2"></div>Some social media you can contact</Badge>
       <div className='flex items-center space-x-5'>
         <span className='flex items-center space-x-5'>
           {HeroIcon.map((item, index) => (

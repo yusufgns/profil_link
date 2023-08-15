@@ -3,15 +3,15 @@ import Hero from "@/components/Hero"
 import Work from "@/components/Work"
 import Skills from "@/components/Skills"
 import Footer from "@/components/Footer"
+import Layout from "@/components/Layout/MainHeader"
 
 export default function Home() {
   const HeroIcon = SocialMedia()
   return (
-    <main className="flex flex-col space-y-16">
+    <Layout>
       <Hero />
       <Work />
       <Skills />
-      <Footer />
-    </main>
+    </Layout>
   )
 }
