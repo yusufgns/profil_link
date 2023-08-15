@@ -1,5 +1,5 @@
 import React from 'react'
-import { Feature, FeatureHeader } from "./work.constant"
+import { Feature, FeatureHeader } from "./home.constant"
 import Image from 'next/image'
 
 export default function index() {

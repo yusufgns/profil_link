@@ -6,7 +6,7 @@ export interface IHeader {
 const Headers = (): IHeader[] => {
     return [
         {
-            title: "Works",
+            title: "Home",
             href: "/"
         },
         {

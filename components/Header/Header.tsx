@@ -23,7 +23,7 @@ export default function Header() {
 // eslint-disable-next-line react/display-name
 Header.Item = (item: IHeader, index: number) => {
     return (
-        <Link key={index} href={`${item.href}`} className='hover:text-black transition-colors font-medium'>
+        <Link key={index} href={item.href} className='hover:text-black transition-colors font-medium'>
             {item.title}
         </Link>
     )

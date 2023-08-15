@@ -1,4 +1,4 @@
-export interface IFeature {
+export interface IHome {
     title: string;
     href?: string;
     description: string;
@@ -7,11 +7,11 @@ export interface IFeature {
     image: string | null
 }
 
-export interface IFeatureHeader {
+export interface IHomeHeader {
     title: string
 }
 
-export const Feature = (): IFeature[] => {
+export const Feature = (): IHome[] => {
     return [
         {
             title: "Link Tier",
