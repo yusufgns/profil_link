@@ -1,9 +1,10 @@
-import React from 'react'
-import Headers, { IHeader } from "./header.constant"
-import Link from 'next/link'
+import React from 'react';
+import Headers, { IHeader } from "./header.constant";
+import Link from 'next/link';
 
 export default function Index() {
-    const Test = Headers()
+    const Header = Headers();
+
     return (
         <main className='flex items-center text-[#8C99AF] justify-between'>
             <section className='flex items-center'>
@@ -11,20 +12,20 @@ export default function Index() {
                 <h1 className='font-medium'>Yusuf Gunes</h1>
             </section>
             <section className='space-x-6'>
-                {Test.map((item, index) => (
-                    <Headers.Item key={index} {...item} />
+                {Header.map((item, index) => (
+                    <HeadersItem key={index} {...item} />
                 ))}
             </section>
         </main>
-    )
+    );
 }
 
-
-// eslint-disable-next-line react/display-name
-Headers.Item = (item: IHeader, index: number) => {
+function HeadersItem(item: IHeader) {
     return (
-        <Link key={index} href={item.href} className='hover:text-black transition-colors font-medium'>
-            {item.title}
+        <Link href={item.href} key={item.title}>
+            <div className='hover:text-black transition-colors font-medium'>
+                {item.title}
+            </div>
         </Link>
-    )
+    );
 }
