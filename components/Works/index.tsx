@@ -1,7 +1,6 @@
 import React from 'react'
 import { Work, WorkHeader } from "./works.constant"
 import Image from 'next/image'
-import { Dot } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 export default function index() {
