@@ -1,6 +1,6 @@
 import React from 'react'
 import { Bookmark, BookmarkHeader } from "./bookmark.constant"
-import { Dot } from 'lucide-react/dist/esm/lucide-react'
+import { Dot } from 'lucide-react'
 
 export default function Index() {
     return (

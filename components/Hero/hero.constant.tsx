@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react"
-import { MailIcon, Github, Linkedin, X } from "lucide-react/dist/esm/lucide-react"
+import { MailIcon, Github, Linkedin, X } from "lucide-react"
 
 
 export interface ISocial {
