@@ -8,7 +8,7 @@ export default function Index() {
         <main className='flex items-center space-x-5 justify-center flex-col mt-16'>
             <section className='flex items-center space-x-5 justify-center mb-4'>
                 {HeroIcon.map((item, index) => (
-                    <Link key={index} href={item.socialMedia.href} target='_blank'>
+                    <Link key={index} href={item.socialMedia.href || ''} target='_blank'>
                         {item.socialMedia.icon}
                     </Link>
                 ))}

@@ -22,7 +22,7 @@ export default function Index() {
 
 function HeadersItem(item: IHeader) {
     return (
-        <Link href={item.href} key={item.title}>
+        <Link href={item.href || ""} key={item.title}>
             <div className='hover:text-black transition-colors font-medium'>
                 {item.title}
             </div>

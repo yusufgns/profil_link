@@ -13,12 +13,12 @@ export default function Index() {
       <div className='flex items-center space-x-5'>
         <span className='flex items-center space-x-5'>
           {HeroIcon.map((item, index) => (
-            <Link key={index} href={item.socialMedia.href} target='_blank'>
+            <Link key={index} href={item.socialMedia.href || ""} target='_blank'>
               {item.socialMedia.icon}
             </Link>
           ))}
         </span>
-        <Link href={HeroMe.cv} target='_blank'>
+        <Link href={HeroMe.cv || ""} target='_blank'>
           <Button variant={'outline'}>Resum</Button>
         </Link>
       </div>
