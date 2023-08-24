@@ -12,7 +12,7 @@ export default function Index() {
             </section>
             <section className='space-x-6'>
                 {Test.map((item, index) => (
-                    <Header.Item key={index} {...item} />
+                    <Headers.Item key={index} {...item} />
                 ))}
             </section>
         </main>
@@ -21,7 +21,7 @@ export default function Index() {
 
 
 // eslint-disable-next-line react/display-name
-Header.Item = (item: IHeader, index: number) => {
+Headers.Item = (item: IHeader, index: number) => {
     return (
         <Link key={index} href={item.href} className='hover:text-black transition-colors font-medium'>
             {item.title}
