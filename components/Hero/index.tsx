@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Button } from '../ui/button'
 import { Badge } from '../ui/badge'
 
-export default function index() {
+export default function Index() {
   const HeroIcon = Hero()
   return (
     <div>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Hero as SocialMedia } from "@/components/Hero/hero.constant"
 import Link from 'next/link'
 
-export default function index() {
+export default function Index() {
     const HeroIcon = SocialMedia()
     return (
         <main className='flex items-center space-x-5 justify-center flex-col mt-16'>

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Work, WorkHeader } from '@/components/Works/works.constant'
 
-export default function index() {
+export default function Index() {
     const router = useRouter()
     const works = Work()
     return (

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Bookmark, BookmarkHeader } from "./bookmark.constant"
+import { Dot } from 'lucide-react/dist/esm/lucide-react'
 
-export default function index() {
+export default function Index() {
     return (
         <div>
             <h1 className='text-2xl font-bold tracking-[-0.042rem] leading-10'>{BookmarkHeader.title}</h1>
@@ -21,7 +22,7 @@ export default function index() {
                                     <h1 className='text-black opacity-80 font-semibold'>
                                         {detail.title}
                                     </h1>
-                                    
+                                    <Dot className='opacity-40 font-medium' />
                                     <div className='opacity-40 font-medium'>
                                         {detail.badge}
                                     </div>
@@ -31,7 +32,7 @@ export default function index() {
                                     <h1 className='text-sm'>
                                         {detail.url}
                                     </h1>
-                                    
+                                    <Dot />
                                     <h1 className='text-sm'>
                                         {detail.time}
                                     </h1>

@@ -2,7 +2,7 @@ import React from 'react'
 import Headers, { IHeader } from "./header.constant"
 import Link from 'next/link'
 
-export default function Header() {
+export default function Index() {
     const Test = Headers()
     return (
         <main className='flex items-center text-[#8C99AF] justify-between'>
