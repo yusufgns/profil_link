@@ -17,7 +17,7 @@ export interface IBookmarkDetailt {
 }
 
 export const BookmarkHeader: IBookmarkHeader = {
-    title: "Bookmarks",
+    title: "BOOKMARKS",
     description: "I'm sharing the content I liked, discovered, or learned throughout the day here."
 }
 

@@ -10,6 +10,10 @@ const Headers = (): IHeader[] => {
             href: "/"
         },
         {
+            title: "Works",
+            href: "/works"
+        },
+        {
             title: "Bookmarks",
             href: "/bookmarks"
         }

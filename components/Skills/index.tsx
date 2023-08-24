@@ -1,6 +1,6 @@
 import React from 'react'
 import {Skills} from "@/components/Skills/skill.constant"
-import {Dot} from "lucide-react/dist/esm/lucide-react"
+import {Dot} from "lucide-react"
 
 export default function index() {
     const skill = Skills()

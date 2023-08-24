@@ -1,11 +1,11 @@
 import React from 'react'
 import { Bookmark, BookmarkHeader } from "./bookmark.constant"
-import { Dot } from 'lucide-react/dist/esm/lucide-react'
+import { Dot } from 'lucide-react'
 
 export default function index() {
     return (
         <div>
-            <h1 className='text-3xl font-bold tracking-[-0.042rem] leading-10'>{BookmarkHeader.title}</h1>
+            <h1 className='text-2xl font-bold tracking-[-0.042rem] leading-10'>{BookmarkHeader.title}</h1>
             <h1 className='text-[#4a576f] text-lg break-words mt-3 mb-7'>{BookmarkHeader.description}</h1>
             {Bookmark.map((item, index) => (
                 <div key={index}>
