@@ -48,6 +48,6 @@ export const Feature = (): IHome[] => {
     ]
 }
 
-export const FeatureHeader: IFeatureHeader = {
+export const FeatureHeader: IHomeHeader = {
     title: "WORKS"
 }
