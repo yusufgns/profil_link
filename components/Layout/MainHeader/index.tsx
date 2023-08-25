@@ -15,7 +15,7 @@ export default function Index({ children }: IHeader) {
       <section className="flex flex-col space-y-16 max-w-[720px] m-auto py-8" >
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </section>
     </main>
   );

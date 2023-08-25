@@ -4,7 +4,8 @@ export interface IWork {
 }
 
 export interface IWorkPage {
-    introduction : string | null
+    introduction: string | null,
+    introduction_2: string | null,
 }
 
 export interface IWorkDetail {
@@ -20,14 +21,15 @@ export interface IWorkDetail {
 export const Work = (): IWorkDetail[] => {
     return [
         {
-            description: "Wordigo",
+            description: "It was planned to facilitate language learning.",
             title: "Wordigo",
             end_time: "01 Jun",
             image: "",
             start_time: "01 Jun",
             id: "wordigo",
             work_page: {
-                introduction: "wordigo"
+                introduction: "Farklı bir dil öğrenmeye karar verdiğimizde ilk olarak o dil için eğitim alırız ve sonrasında çeşitli araştırmalar yaparız. Araştırmalar sonucunda dil seviyenizi geliştirmek için oyunlar, mesajlaşma uygulaması ve sosyal medya fenomenlerinin daha farklı önerileriyle karşılaşırız.",
+                introduction_2: "Biz de insanların dil öğrenirken nelere ihtiyaç duyduklarını düşünerek bir proje geliştirmeye başladık. İlk adım olarak da her yerden erişebilecekleri bir sözlük yapısı kurgulayarak başladık ve adım adım insanların dil öğrenirken hayatlarını kolaylaştırmak için nelere ihtiyaç duyduklarını düşünerek bir yol haritası oluşturduk."
             }
         },
         {
@@ -38,7 +40,8 @@ export const Work = (): IWorkDetail[] => {
             start_time: "01 Jun",
             id: "linktier",
             work_page: {
-                introduction: "linktier"
+                introduction: "linktier",
+                introduction_2: "linktier"
             }
         }
     ]

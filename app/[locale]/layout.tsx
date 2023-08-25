@@ -1,6 +1,8 @@
 import Header from '@/components/Header/Header'
-import './globals.css'
+import '../globals.css'
 import type { Metadata } from 'next'
+import { useLocale } from 'next-intl'
+import { notFound } from "next/navigation"
 
 export const metadata: Metadata = {
   title: 'Yusuf GUNES',
@@ -8,12 +10,20 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children, params
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
+  params: any
 }) {
+
+  const locale = useLocale()
+
+  if (params.locale !== locale) {
+    notFound()
+  }
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>
         {children}
       </body>
