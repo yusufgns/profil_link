@@ -1,7 +1,8 @@
 import React from 'react';
 import Headers, { IHeader } from "./header.constant";
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl'
+import Translate from './translate';
 
 export default function Index() {
     const Header = Headers();
@@ -17,12 +18,14 @@ export default function Index() {
                 {Header.map((item, index) => (
                     <HeadersItem key={index} {...item} />
                 ))}
+
+                <Translate />
             </section>
         </main>
     );
 }
 
-function HeadersItem(item: IHeader) {
+const HeadersItem = (item: IHeader) => {
     return (
         <Link href={item.href || ""} key={item.title}>
             <div className='hover:text-black transition-colors font-medium'>

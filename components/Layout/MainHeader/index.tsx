@@ -9,11 +9,11 @@ interface IHeader {
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Index({ children }: IHeader) {
+export default function Index({ children}: IHeader) {
   return (
     <main className={inter.className}>
       <section className="flex flex-col space-y-16 max-w-[720px] m-auto py-8" >
-        <Header />
+        <Header/>
         {children}
         <Footer />
       </section>
