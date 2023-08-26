@@ -13,7 +13,6 @@ export interface IHero {
 
 export interface IHeroMe {
     map(arg0: (item: any, index: any) => React.JSX.Element): React.ReactNode,
-    title: string | null,
     cv: string | null
 }
 
@@ -48,7 +47,6 @@ export const Hero = (): IHero[] => {
 
 export const HeroMe: IHeroMe = {
     cv: "https://flowcv.com/resume/atd01s4vv4",
-    title: "Hello, I'm Yusuf. I like to constantly improve myself in the digital world.",
     map: function (arg0: (item: any, index: any) => React.JSX.Element): React.ReactNode {
         throw new Error("Function not implemented.")
     }

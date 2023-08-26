@@ -16,7 +16,7 @@ export default function Translate() {
       {TranslateArray(locales).map((item, index) => (
         <div
           key={index}
-          className={`text-xs hover:text-black opacity-75 ${item.isActive ? ' text-black text-base' : ''}`}
+          className={`text-xs hover:text-black font-bold ${item.isActive ? ' text-black text-base' : 'opacity-60'}`}
           onClick={() => {
             if (item.href) {
               handleTranslate(item.href);

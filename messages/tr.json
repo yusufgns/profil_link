@@ -1,8 +1,52 @@
 {
-          "Index": {
-                    "title": "Selam"
+     "Header": {
+          "name": "Yusuf GÜNEŞ",
+          "Home": "Ana Sayfa",
+          "Works": "Çalışmalar",
+          "Bookmarks": "Yer İşaretler"
+     },
+     "Footer": {
+          "country": "Türkiye",
+          "city": "İstanbul"
+     },
+     "Home": {
+          "title": "Merhaba ben Yusuf. Dijital dünyada kendimi sürekli geliştirmeyi seviyorum.",
+          "social": "İletişim kurabileceğiniz bazı sosyal medyalar",
+          "works": "ÇALIŞMALAR",
+          "skills": "YETENEKLER",
+          "resum": "Özgeçmiş"
+     },
+     "Works": {
+          "wordigo": {
+               "description": "Dil öğrenimini kolaylaştıracak şekilde planlandı.",
+               "title": "Wordigo",
+               "end_time": "01 Jun",
+               "start_time": "01 Jun",
+               "introduction": "Farklı bir dil öğrenmeye karar verdiğimizde ilk olarak o dil için eğitim alırız ve sonrasında çeşitli araştırmalar yaparız. Araştırmalar sonucunda dil seviyenizi geliştirmek için oyunlar, mesajlaşma uygulaması ve sosyal medya fenomenlerinin daha farklı önerileriyle karşılaşırız.",
+               "introduction_2": "Biz de insanların dil öğrenirken nelere ihtiyaç duyduklarını düşünerek bir proje geliştirmeye başladık. İlk adım olarak da her yerden erişebilecekleri bir sözlük yapısı kurgulayarak başladık ve adım adım insanların dil öğrenirken hayatlarını kolaylaştırmak için nelere ihtiyaç duyduklarını düşünerek bir yol haritası oluşturduk.",
+               "ideate": "",
+               "responsibilities": "UI Developer - Competitor Analysis - Ideation - Research - Data Connections - Custom Component Creator",
+               "role": "Frontend Developer"
           },
-          "Hero": {
-                    "name": "Yusuf GÜNEŞ"
+          "linktier": {
+               "description": "Link paylaşım platformu olarak kurgulandı.",
+               "title": "Link Tier",
+               "end_time": "01 Jun",
+               "start_time": "01 Jun",
+               "introduction": "İnsanların link paylaşımlarını gerçekleştirirken günlük hayatlarından parçalar, ilgi alanları ve hobileriyle ilgili paylaşımlar yapmalarını sağlayacak bir platform oluşturmak istedim. İnsanlar sosyal medyalarını, yaptıkları projelerin linklerini, elde ettikleri gelirleri ve daha fazlasını paylaşsınlar diye oluşturuldu. UI & UX seviyesinden dolayı projeyi durdurmayı düşünerek farklı projeler geliştirmeye ve birgün bu fikri tekrardan canlandırmayı seçtim.",
+               "introduction_2": "",
+               "ideate": "",
+               "responsibilities": "Custom Component Creator - Supabase Connection - UI Developer - Ideation - Research",
+               "role": "Founder"
           }
+     },
+     "works_page": {
+          "title": "Çalışmalar",
+          "description": "Üzerinde çalıştığım projeler hakkında daha detaylı bilgilere ulaşabilirsiniz.",
+          "timeline": "Zaman Çizelgesi",
+          "role": "Rol",
+          "responsibilities": "Sorumluluklar",
+          "introduction": "Giriş",
+          "ideate": "Fikir"
+     }
 }

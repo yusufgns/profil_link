@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl"
 export interface IWork {
     title: string | null,
     description: string | null,
@@ -15,33 +16,40 @@ export interface IWorkDetail {
     start_time: string | number | null,
     end_time: string | number | null,
     id: string | number,
-    work_page?: IWorkPage | null
+    work_page?: IWorkPage | null,
+    responsibilities: string | number,
+    role: string | number,
 }
 
 export const Work = (): IWorkDetail[] => {
+    const t = useTranslations("Works")
     return [
         {
-            description: "It was planned to facilitate language learning.",
-            title: "Wordigo",
-            end_time: "01 Jun",
+            description: `${t("wordigo.description")}`,
+            title: `${t("wordigo.title")}`,
+            end_time: `${t("wordigo.end_time")}`,
             image: "",
-            start_time: "01 Jun",
+            start_time: `${t("wordigo.start_time")}`,
             id: "wordigo",
+            responsibilities: `${t("wordigo.responsibilities")}`,
+            role: `${t("wordigo.role")}`,
             work_page: {
-                introduction: "Farklı bir dil öğrenmeye karar verdiğimizde ilk olarak o dil için eğitim alırız ve sonrasında çeşitli araştırmalar yaparız. Araştırmalar sonucunda dil seviyenizi geliştirmek için oyunlar, mesajlaşma uygulaması ve sosyal medya fenomenlerinin daha farklı önerileriyle karşılaşırız.",
-                introduction_2: "Biz de insanların dil öğrenirken nelere ihtiyaç duyduklarını düşünerek bir proje geliştirmeye başladık. İlk adım olarak da her yerden erişebilecekleri bir sözlük yapısı kurgulayarak başladık ve adım adım insanların dil öğrenirken hayatlarını kolaylaştırmak için nelere ihtiyaç duyduklarını düşünerek bir yol haritası oluşturduk."
+                introduction: `${t("wordigo.introduction")}`,
+                introduction_2: `${t("wordig.introduction_2")}`
             }
         },
         {
-            description: "Link Tier",
-            title: "Link Tier",
-            end_time: "01 Jun",
+            description: `${t("linktier.description")}`,
+            title: `${t("linktier.title")}`,
+            end_time: `${t("linktier.end_time")}`,
             image: "",
-            start_time: "01 Jun",
+            start_time: `${t("linktier.start_time")}`,
             id: "linktier",
+            responsibilities: `${t("linktier.responsibilities")}`,
+            role: `${t("linktier.role")}`,
             work_page: {
-                introduction: "linktier",
-                introduction_2: "linktier"
+                introduction: `${t("linktier.introduction")}`,
+                introduction_2: `${t("linktier.introduction_2")}`
             }
         }
     ]

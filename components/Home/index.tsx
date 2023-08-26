@@ -3,13 +3,17 @@ import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Work, WorkHeader } from '@/components/Works/works.constant'
+import { useTranslations } from 'next-intl';
 
 export default function Index() {
     const router = useRouter()
     const works = Work()
+    const t = useTranslations('Home')
     return (
         <div>
-            <h1 className='font-bold text-[#8C99AF] mb-5'>{WorkHeader.title}</h1>
+            <h1 className='font-bold text-[#8C99AF] mb-5'>
+                {t('works')}
+            </h1>
             <div className='flex items-center justify-between gap-y-8 flex-wrap'>
                 {works.map((item, index) => (
                     <div key={index} className='flex text-start flex-col max-w-[344px] min-w-[344px] space-y-1 hover:cursor-pointer' onClick={() => router.push(`/works/${item.id}`)}>

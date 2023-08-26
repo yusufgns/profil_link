@@ -6,7 +6,7 @@ import Translate from './translate';
 
 export default function Index() {
     const Header = Headers();
-    const t = useTranslations('Hero')
+    const t = useTranslations('Header')
 
     return (
         <main className='flex items-center text-[#8C99AF] justify-between'>
@@ -18,7 +18,6 @@ export default function Index() {
                 {Header.map((item, index) => (
                     <HeadersItem key={index} {...item} />
                 ))}
-
                 <Translate />
             </section>
         </main>
@@ -26,10 +25,11 @@ export default function Index() {
 }
 
 const HeadersItem = (item: IHeader) => {
+    const t = useTranslations('Header')
     return (
         <Link href={item.href || ""} key={item.title}>
             <div className='hover:text-black transition-colors font-medium'>
-                {item.title}
+                {t(item.title)}
             </div>
         </Link>
     );

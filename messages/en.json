@@ -1,8 +1,50 @@
 {
-          "Index": {
-                    "title": "Hello World"
+     "Header": {
+          "name": "Yusuf GUNES",
+          "Home": "Home",
+          "Works": "Works",
+          "Bookmarks": "Bookmarks"
+     },
+     "Footer": {
+          "country": "Turkey",
+          "city": "Istanbul"
+     },
+     "Home": {
+          "title": "Hello, I'm Yusuf. I like to constantly improve myself in the digital world.",
+          "social": "Some social media you can contact",
+          "works": "WORKS",
+          "skills": "SKILLS",
+          "resum": "Resum"
+     },
+     "Works": {
+          "wordigo": {
+               "description": "It was planned to facilitate language learning.",
+               "title": "Wordigo",
+               "end_time": "01 Jun",
+               "start_time": "01 Jun",
+               "introduction": "In the decision options of a different language, you first receive training for that language, and then various improvements are implemented. As a result of research, we encounter different instances of games, messaging applications, and social media phenomena with more diverse encounters to showcase your language proficiency level.",
+               "introduction_2": "Considering people's needs while learning a language, we also started developing a project. As a first step, we began by designing a dictionary structure that they can access from anywhere. Step by step, we created a roadmap by thinking about what people require to facilitate their lives while learning a language.",
+               "ideate": "",
+               "responsibilities": "UI Developer - Competitor Analysis - Ideation - Research - Data Connections - Custom Component Creator",
+               "role": "Frontend Developer"
           },
-          "Hero": {
-                    "name": "Yusuf GUNES"
+          "linktier": {
+               "description": "It was created as a link sharing platform.",
+               "title": "Link Tier",
+               "end_time": "01 Jun",
+               "start_time": "01 Jun",
+               "introduction": "I aimed to create a platform that enables people to share snippets from their daily lives, as well as posts related to their interests and hobbies when sharing links. The platform was designed for individuals to share their social media, links to their projects, earnings, and more. Due to UI & UX challenges, I decided to pause the project and chose to develop different projects instead. I hope to revive this idea someday in the future.","introduction_2": "","ideate": "",
+               "responsibilities": "Custom Component Creator - Supabase Connection - UI Developer - Ideation - Research",
+               "role": "Founder"
           }
+     },
+     "works_page": {
+          "title": "Works",
+          "description": "There is more detailed information about the projects I have worked on.",
+          "timeline": "Timeline",
+          "role": "Role",
+          "responsibilities": "Responsibilities",
+          "introduction": "Introduction",
+          "ideate": "Ideate"
+     }
 }
