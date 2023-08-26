@@ -4,7 +4,7 @@ import { Work } from "@/components/Works/works.constant"
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 
-export default function page({ params }: { params: { id: string } }) {
+export default function Page({ params }: { params: { id: string } }) {
      const ID = params.id
      const data = Work().filter((item) => item.id === ID)
      const t = useTranslations('works_page')

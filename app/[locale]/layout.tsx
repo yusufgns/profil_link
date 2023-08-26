@@ -1,4 +1,3 @@
-import Header from '@/components/Header/Header'
 import '../globals.css'
 import type { Metadata } from 'next'
 import { useLocale } from 'next-intl'
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
   description: "Hello, I'm Yusuf Gunes",
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children, params
 }: {
   children: React.ReactNode,
@@ -23,17 +22,10 @@ export default async function RootLayout({
     notFound()
   }
 
-  let messages;
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
-
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={locale}>
           {children}
         </NextIntlClientProvider>
       </body>
