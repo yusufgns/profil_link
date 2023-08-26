@@ -2,12 +2,12 @@ import React from 'react'
 import MainLayout from "@/components/Layout/MainHeader"
 import { Work } from "@/components/Works/works.constant"
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 
 export default function page({ params }: { params: { id: string } }) {
      const ID = params.id
      const data = Work().filter((item) => item.id === ID)
      const t = useTranslations('works_page')
-     const tt = useTranslations('Works')
 
      return (
           <MainLayout>
@@ -16,12 +16,12 @@ export default function page({ params }: { params: { id: string } }) {
                          <section>
                               <h1 className='text-2xl font-bold tracking-[-0.042rem] leading-10 mb-3'>{item.title}</h1>
                               <h1 className='text-[#4a576f] text-lg break-words'>
-                              <p>{item.description}</p>
+                                   <p>{item.description}</p>
                               </h1>
                          </section>
 
                          <section>
-                              {item.image ? <img alt='' src={item.image} className='w-full h-full rounded-lg'></img> : <div className='w-full h-[240px] bg-gray-500 rounded-lg'></div>}
+                              {item.image ? <Image alt='' src={item.image} className='w-full h-full rounded-lg'></Image> : <div className='w-full h-[240px] bg-gray-500 rounded-lg'></div>}
                               <div className='my-7 flex space-x-9'>
                                    <div className='max-w-[250px] break-words'>
                                         <h1 className='font-semibold text-sm'>{t('responsibilities')}</h1>
