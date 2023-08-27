@@ -1,13 +1,17 @@
 import React from 'react'
 import { Bookmark, BookmarkHeader } from "./bookmark.constant"
 import { Dot } from 'lucide-react'
+import Link from 'next/link'
+import { cn } from '@/lib/utils'
 
 export default function Index() {
+    const BHeader = BookmarkHeader()
+    const Bookmarks = Bookmark()
     return (
         <div>
-            <h1 className='text-2xl font-bold tracking-[-0.042rem] leading-10'>{BookmarkHeader.title}</h1>
-            <h1 className='text-[#4a576f] text-lg break-words mt-3 mb-7'>{BookmarkHeader.description}</h1>
-            {Bookmark.map((item, index) => (
+            <h1 className='text-2xl font-bold tracking-[-0.042rem] leading-10'>{BHeader.title}</h1>
+            <h1 className='text-[#4a576f] text-lg break-words mt-3 mb-7'>{BHeader.description}</h1>
+            {Bookmarks.map((item, index) => (
                 <div key={index}>
                     <span className='flex items-center justify-between mb-3'>
                         <h1 className='text-lg font-semibold'>{item.head}</h1>
@@ -28,12 +32,12 @@ export default function Index() {
                                     </div>
                                 </span>
 
-                                <span className='opacity-40 flex items-center mt-1'>
-                                    <h1 className='text-sm'>
+                                <span className='flex items-center mt-1'>
+                                    <Link href={detail.url || ""} className={cn('text-sm hover:opacity-100 opacity-40', detail.url === "EMPTY" && "hover:opacity-40")}>
                                         {detail.url}
-                                    </h1>
+                                    </Link>
                                     <Dot />
-                                    <h1 className='text-sm'>
+                                    <h1 className='text-sm opacity-40'>
                                         {detail.time}
                                     </h1>
                                 </span>

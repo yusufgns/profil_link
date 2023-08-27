@@ -16,6 +16,11 @@
           "skills": "SKILLS",
           "resum": "Resum"
      },
+     "Bookmarks": {
+          "title": "BOOKMARKS",
+          "description": "I'm sharing the content I liked, discovered, or learned throughout the day here.",
+          "week": "Week"
+     },
      "Works": {
           "wordigo": {
                "description": "It was planned to facilitate language learning.",
@@ -33,7 +38,9 @@
                "title": "Link Tier",
                "end_time": "01 Jun",
                "start_time": "01 Jun",
-               "introduction": "I aimed to create a platform that enables people to share snippets from their daily lives, as well as posts related to their interests and hobbies when sharing links. The platform was designed for individuals to share their social media, links to their projects, earnings, and more. Due to UI & UX challenges, I decided to pause the project and chose to develop different projects instead. I hope to revive this idea someday in the future.","introduction_2": "","ideate": "",
+               "introduction": "I aimed to create a platform that enables people to share snippets from their daily lives, as well as posts related to their interests and hobbies when sharing links. The platform was designed for individuals to share their social media, links to their projects, earnings, and more. Due to UI & UX challenges, I decided to pause the project and chose to develop different projects instead. I hope to revive this idea someday in the future.",
+               "introduction_2": "",
+               "ideate": "",
                "responsibilities": "Custom Component Creator - Supabase Connection - UI Developer - Ideation - Research",
                "role": "Founder"
           }

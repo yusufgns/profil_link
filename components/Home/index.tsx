@@ -1,12 +1,10 @@
-'use client';
 import React from 'react'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
 import { Work, WorkHeader } from '@/components/Works/works.constant'
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function Index() {
-    const router = useRouter()
     const works = Work()
     const t = useTranslations('Home')
     return (
@@ -16,7 +14,7 @@ export default function Index() {
             </h1>
             <div className='flex items-center justify-between gap-y-8 flex-wrap'>
                 {works.map((item, index) => (
-                    <div key={index} className='flex text-start flex-col max-w-[344px] min-w-[344px] space-y-1 hover:cursor-pointer' onClick={() => router.push(`/works/${item.id}`)}>
+                    <Link href={`/works/${item.id}`} key={index} className='flex text-start flex-col max-w-[344px] min-w-[344px] space-y-1 hover:cursor-pointer'>
                         <span>
                             {item.image && <Image alt='' src={item.image} width={344} height={344} className='w-[344px] h-[344px] rounded-lg'></Image>}
                             {item.image === "" && <div className='w-[344px] h-[344px] bg-gray-500 rounded-lg'></div>}
@@ -33,7 +31,7 @@ export default function Index() {
                         <span className='text-[#8C99AF] opacity-75 text-[13px]'>
                             {item.start_time} - {item.end_time}
                         </span>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

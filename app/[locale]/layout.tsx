@@ -9,6 +9,30 @@ export const metadata: Metadata = {
   description: "Hello, I'm Yusuf Gunes",
 }
 
+async function RootChild({
+  params, children
+}: { params: any, children: React.ReactNode, }) {
+
+  const locale = useLocale()
+  if (params.locale !== locale) {
+    notFound()
+  }
+
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
+
+
+  return (
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      {children}
+    </NextIntlClientProvider>
+  )
+}
+
 export default function RootLayout({
   children, params
 }: {
@@ -25,9 +49,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider locale={locale}>
-          {children}
-        </NextIntlClientProvider>
+        <RootChild params={params} children={children} />
       </body>
     </html>
   )

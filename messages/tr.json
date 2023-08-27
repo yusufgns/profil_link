@@ -3,7 +3,7 @@
           "name": "Yusuf GÜNEŞ",
           "Home": "Ana Sayfa",
           "Works": "Çalışmalar",
-          "Bookmarks": "Yer İşaretler"
+          "Bookmarks": "Yer İşaretleri"
      },
      "Footer": {
           "country": "Türkiye",
@@ -15,6 +15,11 @@
           "works": "ÇALIŞMALAR",
           "skills": "YETENEKLER",
           "resum": "Özgeçmiş"
+     },
+     "Bookmarks": {
+          "title": "YER İŞARETLERİ",
+          "description": "Gün boyu beğendiğim, keşfettiğim, öğrendiğim içerikleri burada paylaşıyorum.",
+          "week": "Hafta"
      },
      "Works": {
           "wordigo": {

@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 export interface IBookmarkHeader {
     title: string,
     description: string | null
@@ -16,40 +18,47 @@ export interface IBookmarkDetailt {
     time: string | number
 }
 
-export const BookmarkHeader: IBookmarkHeader = {
-    title: "BOOKMARKS",
-    description: "I'm sharing the content I liked, discovered, or learned throughout the day here."
+
+export const BookmarkHeader = (): IBookmarkHeader => {
+    const t = useTranslations("Bookmarks")
+    return {
+        title: `${t("title")}`,
+        description: `${t("description")}`
+    }
 }
 
-export const Bookmark: IBookmark[] = [
-    {
-        head: "Week 1",
-        time: "08.15.2023",
-        hero: [
-            {
-                badge: "Frontend",
-                title: "React.js Documents",
-                url: "test",
-                time: "08.15.2023"
-            },
-            {
-                badge: "Frontend",
-                title: "React.js Documents",
-                url: "test.com",
-                time: "08.15.2023"
-            },
-        ]
-    },
-    {
-        head: "Week 2",
-        time: "01.15.2023",
-        hero: [
-            {
-                badge: "Frontend",
-                title: "React.js Documents",
-                url: "test.com",
-                time: "08.15.2023"
-            },
-        ]
-    },
-]
+export const Bookmark = (): IBookmark[] => {
+    const t = useTranslations("Bookmarks")
+    return [
+        {
+            head: `${t("week")} 1`,
+            time: "08.15.2023",
+            hero: [
+                {
+                    badge: "Frontend",
+                    title: "React.js Documents",
+                    url: "EMPTY",
+                    time: "08.15.2023"
+                },
+                {
+                    badge: "Frontend",
+                    title: "React.js Documents",
+                    url: "test.com",
+                    time: "08.15.2023"
+                },
+            ]
+        },
+        {
+            head: `${t("week")} 2`,
+            time: "01.15.2023",
+            hero: [
+                {
+                    badge: "Frontend",
+                    title: "React.js Documents",
+                    url: "test.com",
+                    time: "08.15.2023"
+                },
+            ]
+        },
+    ]
+}
