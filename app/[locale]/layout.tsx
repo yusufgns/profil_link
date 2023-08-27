@@ -1,18 +1,23 @@
-import '../globals.css'
-import type { Metadata } from 'next'
-import { useLocale } from 'next-intl'
-import { notFound } from "next/navigation"
+import '../globals.css';
+import type { Metadata } from 'next';
+import { useLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 
 export const metadata: Metadata = {
   title: 'Yusuf GUNES',
   description: "Hello, I'm Yusuf Gunes",
-}
+};
 
 async function RootChild({
-  params, children, locale
-}: { params: any, children: React.ReactNode, locale: any }) {
-
+  params,
+  children,
+  locale,
+}: {
+  params: any;
+  children: React.ReactNode;
+  locale: any;
+}) {
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
@@ -20,32 +25,33 @@ async function RootChild({
     notFound();
   }
 
-
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
       {children}
     </NextIntlClientProvider>
-  )
+  );
 }
 
 export default function RootLayout({
-  children, params
+  children,
+  params,
 }: {
-  children: React.ReactNode,
-  params: any
+  children: React.ReactNode;
+  params: any;
 }) {
-
-  const locale = useLocale()
+  const locale = useLocale();
 
   if (params.locale !== locale) {
-    notFound()
+    notFound();
   }
 
   return (
     <html lang={locale}>
       <body>
-        <RootChild params={params} children={children} locale={locale} />
+        <RootChild params={params} locale={locale}>
+          {children}
+        </RootChild>
       </body>
     </html>
-  )
+  );
 }

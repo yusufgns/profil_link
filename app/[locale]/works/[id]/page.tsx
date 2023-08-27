@@ -21,7 +21,7 @@ export default function Page({ params }: { params: { id: string } }) {
                          </section>
 
                          <section>
-                              {item.image ? <Image alt='' src={item.image} className='w-full h-full rounded-lg'></Image> : <div className='w-full h-[240px] bg-gray-500 rounded-lg'></div>}
+                              {item.image ? <Image alt='' src={item.image} height={0} width={2500} className='w-full h-full rounded-lg max-h-[344px]'></Image> : <div className='w-full h-[240px] bg-gray-500 rounded-lg'></div>}
                               <div className='my-7 flex space-x-9'>
                                    <div className='max-w-[250px] break-words'>
                                         <h1 className='font-semibold text-sm'>{t('responsibilities')}</h1>

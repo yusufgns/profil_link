@@ -18,7 +18,7 @@ export default function Index() {
                 {data.map((item, index) => (
                     <div key={index} className='flex text-start flex-col max-w-[344px] min-w-[344px]hover:cursor-pointer' onClick={() => router.push(`/works/${item.id}`)}>
                         <span className='my-1'>
-                            {item.image && <Image alt='' src={item.image} width={344} height={344} className='w-[344px] h-[344px] rounded-lg'></Image>}
+                            {item.image && <Image alt='' src={item.image} width={720} height={344} className='w-[344px] h-[344px] rounded-lg'></Image>}
                             {item.image === "" && <div className='w-[344px] h-[344px] bg-gray-500 rounded-lg'></div>}
                         </span>
 
