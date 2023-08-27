@@ -10,13 +10,8 @@ export const metadata: Metadata = {
 }
 
 async function RootChild({
-  params, children
-}: { params: any, children: React.ReactNode, }) {
-
-  const locale = useLocale()
-  if (params.locale !== locale) {
-    notFound()
-  }
+  params, children, locale
+}: { params: any, children: React.ReactNode, locale: any }) {
 
   let messages;
   try {
@@ -49,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body>
-        <RootChild params={params} children={children} />
+        <RootChild params={params} children={children} locale={locale} />
       </body>
     </html>
   )
